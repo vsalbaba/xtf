@@ -13,6 +13,7 @@
 		<module>junit5</module>
 		<module>http-client</module>
 		<module>test-helpers</module>
+		<module>testsuite</module>
 	</modules>
 
 	<scm>
@@ -72,6 +73,18 @@
 			<dependency>
 				<groupId>cz.xtf</groupId>
 				<artifactId>core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cz.xtf</groupId>
+				<artifactId>junit5</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cz.xtf</groupId>
+				<artifactId>builder</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
@@ -181,6 +194,10 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${version.maven-surefire-plugin}</version>
+					<configuration>
+						<trimStackTrace>false</trimStackTrace>
+						<failIfNoTests>false</failIfNoTests>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>

@@ -16,3 +16,9 @@ target
 
 *.factorypath
 .vscode/
+
+# test
+test.properties
+global-test.properties
+
+testsuite/log
