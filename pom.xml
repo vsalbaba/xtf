@@ -4,7 +4,7 @@
     <groupId>cz.xtf</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.22-SNAPSHOT</version>
+    <version>0.22-${git.sha}-SNAPSHOT</version>
     <name>XTF</name>
     <description>XTF is a framework designed to ease up aspects of testing in OpenShift environment.</description>
     <url>https://github.com/xtf-cz/xtf/</url>
@@ -58,7 +58,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-
         <!-- Dependency version properties -->
         <version.httpclient>4.5.12</version.httpclient>
         <version.openshift-client>4.13.3</version.openshift-client>
@@ -85,6 +84,8 @@
         <version.maven-surefire-plugin>3.0.0-M5</version.maven-surefire-plugin>
         <version.maven-javadoc-plugin>3.2.0</version.maven-javadoc-plugin>
         <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
+
+        <git.sha>${env.GITHUB_SHA}</git.sha>
     </properties>
 
     <dependencyManagement>
